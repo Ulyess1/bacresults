@@ -3,7 +3,9 @@ print("1-Bac Science Pc")
 print("2-Bac Science Svt")
 print("3-Bac Science Math (A)")
 print("4-Bac Science Math (B)")
-choice = input("Select Type of your Bac :")
+print("5-Bac Lettres et Sciences Humaines")
+print("6-Bac Sciences Économiques et Gestion")
+choice = input("Type The number of your Bac : ")
 
 if choice == "1" :
  print ("Now Add your notes")
@@ -138,6 +140,69 @@ elif choice == "4":
         print("rattrapage", round(lanotetotale, 2))
     else:
         print("manje7tich", round(lanotetotale, 2))
+## Bac Lettres et Sciences Humaines
+elif choice == "5":
+    print("Now Add your notes")
+    arabe = float(input("Langue Arabe :").replace(",", "."))
+    philo = float(input("Philosophie :").replace(",", "."))
+    hist_geo = float(input("Histoire-Géographie :").replace(",", "."))
+    anglais = float(input("Anglais :").replace(",", "."))
+    regional = float(input("entrez votre note du regional :").replace(",", "."))
+    controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
+    controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
+    
+    arabe_w = arabe * 4
+    philo_w = philo * 4
+    hist_geo_w = hist_geo * 4
+    anglais_w = anglais * 3
+
+    total_national = arabe_w + philo_w + hist_geo_w + anglais_w
+    national_avg = total_national / 15 
+
+    cont_avg = (controle1 + controle2) / 2
+    reg_cont_avg = (regional + cont_avg) / 2
+    
+    final_grade = (national_avg + reg_cont_avg) / 2
+
+    if final_grade >= 10:
+        print("nje7ti", round(final_grade, 2))
+    elif final_grade < 10 and final_grade > 7:
+        print("rattrapage", round(final_grade, 2))
+    else:
+        print("manje7tich", round(final_grade, 2))
+
+## Bac Sciences Économiques et Gestion
+elif choice == "6":
+    print("Now Add your notes")
+    eco = float(input("Économie Générale & Statistiques :").replace(",", "."))
+    compta = float(input("Comptabilité & Mathématiques Financières :").replace(",", "."))
+    gestion = float(input("Organisation des Entreprises :").replace(",", "."))
+    philo = float(input("Philosophie :").replace(",", "."))
+    anglais = float(input("Anglais :").replace(",", "."))
+    regional = float(input("entrez votre note du regional :").replace(",", "."))
+    controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
+    controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
+    
+    eco_w = eco * 6
+    compta_w = compta * 4
+    gestion_w = gestion * 3
+    philo_w = philo * 3
+    anglais_w = anglais * 3
+    
+    total_national = eco_w + compta_w + gestion_w + philo_w + anglais_w
+    national_avg = total_national / 19 
+    
+    cont_avg = (controle1 + controle2) / 2
+    reg_cont_avg = (regional + cont_avg) / 2
+    
+    final_grade = (national_avg + reg_cont_avg) / 2
+    
+    if final_grade >= 10:
+        print("nje7ti", round(final_grade, 2))
+    elif final_grade < 10 and final_grade > 7:
+        print("rattrapage", round(final_grade, 2))
+    else:
+        print("manje7tich", round(final_grade, 2))
 
 else:
     print("invalid choice")
