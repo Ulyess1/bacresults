@@ -182,21 +182,16 @@ elif choice == "6":
     regional = float(input("entrez votre note du regional :").replace(",", "."))
     controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
     controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
-    
     eco_w = eco * 6
     compta_w = compta * 4
     gestion_w = gestion * 3
     philo_w = philo * 3
     anglais_w = anglais * 3
-    
     total_national = eco_w + compta_w + gestion_w + philo_w + anglais_w
     national_avg = total_national / 19 
-    
     cont_avg = (controle1 + controle2) / 2
     reg_cont_avg = (regional + cont_avg) / 2
-    
     final_grade = (national_avg + reg_cont_avg) / 2
-    
     if final_grade >= 10:
         print("nje7ti", round(final_grade, 2))
     elif final_grade < 10 and final_grade > 7:
