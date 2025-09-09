@@ -78,60 +78,48 @@ elif choice == "3":
     anglais = float(input("Anglais :").replace(",", "."))
     regional = float(input("entrez votre note du regional :").replace(",", "."))
     controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
-    controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
 
     m = Math * 9
-    pc_weighted = pc * 7
-    si_weighted = si * 3
-    a = anglais * 3
     ph = philo * 3
+    phy = pc * 7
+    scii = si * 3
+    ang = anglais * 3
+    avgtota = m + ph + scii + ang 
+    notesavg = avgtota / 25
+    regcont = regional + controle1
+    regcontdiv = regcont / 2
+    notesbac = notesavg + regcontdiv 
+    notesbacdiv = notesbac / 2
     
-    total = m + pc_weighted + si_weighted + a + ph
-    national = total / 25
-    
-    cont = controle1 + controle2
-    contcontinue = cont / 2
-    
-    regcont = regional + contcontinue
-    divregcont = regcont / 2
-    
-    moyennegeneral = national + divregcont
-    lanotetotale = moyennegeneral / 2
 
-    if lanotetotale >= 10:
-        print("Passed", round(lanotetotale, 2))
-    elif lanotetotale < 10 and lanotetotale > 7:
-        print("Retake", round(lanotetotale, 2))
+    if notesbacdiv >= 10:
+        print("Passed", round(notesbacdiv, 2))
+    elif notesbacdiv < 10 and notesbacdiv > 7:
+        print("Retake", round(notesbacdiv, 2))
     else:
-        print("Failed", round(lanotetotale, 2))
-
+        print("Failed", round(notesbacdiv, 2))
+##Bac science(B)
 elif choice == "4":
     print("Now Add your notes")
     Math = float(input("Math :").replace(",", "."))
     philo = float(input("Philosophie :").replace(",", "."))
-    pc = float(input("Physique :").replace(",", "."))
+    physique = float(input("Physique :").replace(",", "."))
     svt = float(input("science de la vie et de la terre :").replace(",", "."))
     anglais = float(input("Anglais :").replace(",", "."))
     regional = float(input("entrez votre note du regional :").replace(",", "."))
     controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
-    controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
 
     m = Math * 9
-    pc_weighted = pc * 7
+    pc = physique * 7
     s = svt * 3
     a = anglais * 3
     ph = philo * 3
     
-    total = m + pc_weighted + s + a + ph
-    national = total / 25
-    
-    cont = controle1 + controle2
-    contcontinue = cont / 2
-    
-    regcont = regional + contcontinue
-    divregcont = regcont / 2
-    
-    moyennegeneral = national + divregcont
+    totalnotes = m + pc + s + a + ph
+    totalnotesdiv = totalnotes / 25
+    regcont = regional + controle1
+    regcontdiv = regcont / 2
+    moyennegeneral = totalnotesdiv + regcontdiv
     lanotetotale = moyennegeneral / 2
     
     if lanotetotale >= 10:
@@ -176,16 +164,26 @@ elif choice == "6":
     anglais = float(input("Anglais :").replace(",", "."))
     regional = float(input("entrez votre note du regional :").replace(",", "."))
     controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
-    controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
-    
+
+    ec = eco *7
+    comp = compta * 7 
+    gest = gestion * 6
+    ph = philo * 2 
+    an = anglais * 3
+    avgnatio = ec + comp + gest + ph + an 
+    avgnatiodiv = avgnatio / 25
+    regcont = regional + controle1
+    regcontdiv = regcont / 2
+    notesbac = avgnatiodiv + regcontdiv 
+    notesbac1 = notesbac / 2
 
 
-    if final_grade >= 10:
-        print("Passed", round(final_grade, 2))
-    elif final_grade < 10 and final_grade > 7:
-        print("Retake", round(final_grade, 2))
+    if notesbac1 >= 10:
+        print("Passed", round(notesbac1, 2))
+    elif notesbac1 < 10 and notesbac1 > 7:
+        print("Retake", round(notesbac1, 2))
     else:
-        print("Failed", round(final_grade, 2))
+        print("Failed", round(notesbac1, 2))
 
 else:
     print("invalid choice")
