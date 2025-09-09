@@ -31,11 +31,11 @@ if choice == "1" :
  moyennegeneral = national + divregcont
  lanotetotale = moyennegeneral / 2
  if lanotetotale >= 10:
-  print("nje7ti",round(lanotetotale ,2))
+  print("Passed",round(lanotetotale ,2))
  elif lanotetotale < 10 and lanotetotale > 7 :
-  print("rattrapage",round(lanotetotale ,2))
+  print("Retake",round(lanotetotale ,2))
  else:
-  print("manje7tich",round(lanotetotale ,2))
+  print("Failed",round(lanotetotale ,2))
 
   ## bac science svt
 
@@ -63,11 +63,11 @@ elif choice == "2":
     moyennegeneral = national + divregcont
     lanotetotale = moyennegeneral / 2
     if lanotetotale >= 10:
-        print("nje7ti", round(lanotetotale, 2))
+        print("Passed", round(lanotetotale, 2))
     elif lanotetotale < 10 and lanotetotale > 7:
-        print("rattrapage", round(lanotetotale, 2))
+        print("Retake", round(lanotetotale, 2))
     else:
-        print("manje7tich", round(lanotetotale, 2))
+        print("Failed", round(lanotetotale, 2))
 ##Bac Science Math (A)
 elif choice == "3":
     print("Now Add your notes")
@@ -99,11 +99,11 @@ elif choice == "3":
     lanotetotale = moyennegeneral / 2
 
     if lanotetotale >= 10:
-        print("nje7ti", round(lanotetotale, 2))
+        print("Passed", round(lanotetotale, 2))
     elif lanotetotale < 10 and lanotetotale > 7:
-        print("rattrapage", round(lanotetotale, 2))
+        print("Retake", round(lanotetotale, 2))
     else:
-        print("manje7tich", round(lanotetotale, 2))
+        print("Failed", round(lanotetotale, 2))
 
 elif choice == "4":
     print("Now Add your notes")
@@ -135,29 +135,29 @@ elif choice == "4":
     lanotetotale = moyennegeneral / 2
     
     if lanotetotale >= 10:
-        print("nje7ti", round(lanotetotale, 2))
+        print("Passed", round(lanotetotale, 2))
     elif lanotetotale < 10 and lanotetotale > 7:
-        print("rattrapage", round(lanotetotale, 2))
+        print("Retake", round(lanotetotale, 2))
     else:
-        print("manje7tich", round(lanotetotale, 2))
+        print("Failed", round(lanotetotale, 2))
 ## Bac Lettres et Sciences Humaines
 elif choice == "5":
     print("Now Add your notes")
     arabe = float(input("Langue Arabe :").replace(",", "."))
     philo = float(input("Philosophie :").replace(",", "."))
     hist_geo = float(input("Histoire-Géographie :").replace(",", "."))
-    anglais = float(input("Anglais :").replace(",", "."))
+    anglais = float(input("Deuxieme langue :").replace(",", "."))
     regional = float(input("entrez votre note du regional :").replace(",", "."))
     controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
     controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
     
     arabe_w = arabe * 4
     philo_w = philo * 4
-    hist_geo_w = hist_geo * 4
+    hist_geo_w = hist_geo * 3
     anglais_w = anglais * 3
 
     total_national = arabe_w + philo_w + hist_geo_w + anglais_w
-    national_avg = total_national / 15 
+    national_avg = total_national / 14
 
     cont_avg = (controle1 + controle2) / 2
     reg_cont_avg = (regional + cont_avg) / 2
@@ -165,11 +165,11 @@ elif choice == "5":
     final_grade = (national_avg + reg_cont_avg) / 2
 
     if final_grade >= 10:
-        print("nje7ti", round(final_grade, 2))
+        print("Passed", round(final_grade, 2))
     elif final_grade < 10 and final_grade > 7:
-        print("rattrapage", round(final_grade, 2))
+        print("Retake", round(final_grade, 2))
     else:
-        print("manje7tich", round(final_grade, 2))
+        print("Failed", round(final_grade, 2))
 
 ## Bac Sciences Économiques et Gestion
 elif choice == "6":
@@ -193,11 +193,11 @@ elif choice == "6":
     reg_cont_avg = (regional + cont_avg) / 2
     final_grade = (national_avg + reg_cont_avg) / 2
     if final_grade >= 10:
-        print("nje7ti", round(final_grade, 2))
+        print("Passed", round(final_grade, 2))
     elif final_grade < 10 and final_grade > 7:
-        print("rattrapage", round(final_grade, 2))
+        print("Retake", round(final_grade, 2))
     else:
-        print("manje7tich", round(final_grade, 2))
+        print("Failed", round(final_grade, 2))
 
 else:
     print("invalid choice")
