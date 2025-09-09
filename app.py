@@ -3,7 +3,7 @@ print("1-Bac Science Pc")
 print("2-Bac Science Svt")
 print("3-Bac Science Math (A)")
 print("4-Bac Science Math (B)")
-print("5-Bac Lettres et Sciences Humaines")
+print("5-Bac Lettres")
 print("6-Bac Sciences Économiques et Gestion")
 choice = input("Type The number of your Bac : ")
 
@@ -140,37 +140,32 @@ elif choice == "4":
         print("Retake", round(lanotetotale, 2))
     else:
         print("Failed", round(lanotetotale, 2))
-## Bac Lettres et Sciences Humaines
+
+## Bac Lettres 
 elif choice == "5":
     print("Now Add your notes")
     arabe = float(input("Langue Arabe :").replace(",", "."))
     philo = float(input("Philosophie :").replace(",", "."))
     hist_geo = float(input("Histoire-Géographie :").replace(",", "."))
-    anglais = float(input("Deuxieme langue :").replace(",", "."))
-    regional = float(input("entrez votre note du regional :").replace(",", "."))
-    controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
-    controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
-    
-    arabe_w = arabe * 4
-    philo_w = philo * 4
-    hist_geo_w = hist_geo * 3
-    anglais_w = anglais * 3
-
-    total_national = arabe_w + philo_w + hist_geo_w + anglais_w
-    national_avg = total_national / 14
-
-    cont_avg = (controle1 + controle2) / 2
-    reg_cont_avg = (regional + cont_avg) / 2
-    
-    final_grade = (national_avg + reg_cont_avg) / 2
-
-    if final_grade >= 10:
-        print("Passed", round(final_grade, 2))
-    elif final_grade < 10 and final_grade > 7:
-        print("Retake", round(final_grade, 2))
+    deuxi = float(input("Deuxieme langue :").replace(",", "."))
+    regio = float(input("Regional :").replace(",","-"))
+    controle = float(input("Controle :").replace(",","-"))
+    a = arabe * 4
+    ph = philo * 3
+    hist = hist_geo * 3
+    deux = deuxi * 4 
+    totalcoef = a + ph + hist + deux 
+    totaldiv = totalcoef / 14
+    regcont = regio + controle
+    regcontdiv = regcont / 2
+    avgnot = totaldiv + regcontdiv
+    avgnotes = avgnot / 2
+    if avgnotes >= 10:
+        print("Passed", round(avgnotes, 2))
+    elif avgnotes < 10 and avgnotes > 7:
+        print("Retake", round(avgnotes, 2))
     else:
-        print("Failed", round(final_grade, 2))
-
+        print("Failed", round(avgnotes, 2))
 ## Bac Sciences Économiques et Gestion
 elif choice == "6":
     print("Now Add your notes")
@@ -182,16 +177,9 @@ elif choice == "6":
     regional = float(input("entrez votre note du regional :").replace(",", "."))
     controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
     controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",", "."))
-    eco_w = eco * 6
-    compta_w = compta * 4
-    gestion_w = gestion * 3
-    philo_w = philo * 3
-    anglais_w = anglais * 3
-    total_national = eco_w + compta_w + gestion_w + philo_w + anglais_w
-    national_avg = total_national / 19 
-    cont_avg = (controle1 + controle2) / 2
-    reg_cont_avg = (regional + cont_avg) / 2
-    final_grade = (national_avg + reg_cont_avg) / 2
+    
+
+
     if final_grade >= 10:
         print("Passed", round(final_grade, 2))
     elif final_grade < 10 and final_grade > 7:
