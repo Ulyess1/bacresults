@@ -162,32 +162,42 @@ def bac_science_economiques_gestion():
     else:
         print("Failed", round(notesbac1, 2))
 import sys
-print("Created By Mr-Ulyess ::")
-print()
-print("Select your Choice :")
-print()
-print("1-Bac Science Pc.")
-print("2-Bac Science Svt.")
-print("3-Bac Science Math (A).")
-print("4-Bac Science Math (B).")
-print("5-Bac Lettres.")
-print("6-Bac Sciences Économiques et Gestion.")
-print("0-Exit")
-choice = input("Type The number of your Bac : ")
-if choice == "0" :
-    print("Good Bye?...")
-    sys.exit(0)
-if choice == "1" :
-    bac_science_pc()
-elif choice == "2":
-    bac_science_svt()
-elif choice == "3":
-    bac_science_math_A()
-elif choice == "4":
-    bac_science_math_B()   
-elif choice == "5":
-    bac_lettre()
-elif choice == "6":
-    bac_science_economiques_gestion()
-else:
-    print("invalid choice")
+
+def main_menu():
+    print("Created By Mr-Ulyess ::")
+    print()
+    while True:
+        print("Select your Choice :")
+        print()
+        print("1-Bac Science Pc.")
+        print("2-Bac Science Svt.")
+        print("3-Bac Science Math (A).")
+        print("4-Bac Science Math (B).")
+        print("5-Bac Lettres.")
+        print("6-Bac Sciences Économiques et Gestion.")
+        print("0-Exit")
+        choice = input("Select Your Choice : ").strip()
+
+        if choice == "0":
+            print("Good Bye...")
+            sys.exit(0)
+        elif choice == "1":
+            bac_science_pc()
+        elif choice == "2":
+            bac_science_svt()
+        elif choice == "3":
+            bac_science_math_A()
+        elif choice == "4":
+            bac_science_math_B()
+        elif choice == "5":
+            bac_lettre()
+        elif choice == "6":
+            bac_science_economiques_gestion()
+        else:
+            print("Invalid choice")
+
+        input("\nPress Enter to return to the main menu...")
+        print("\n" + "-"*40 + "\n")
+
+if __name__ == "__main__":
+    main_menu()
