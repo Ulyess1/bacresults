@@ -1,48 +1,33 @@
-print("Created By Mr-Ulyess ::")
-print()
-print("Select your Choice :")
-print()
-print("1-Bac Science Pc.")
-print("2-Bac Science Svt.")
-print("3-Bac Science Math (A).")
-print("4-Bac Science Math (B).")
-print("5-Bac Lettres.")
-print("6-Bac Sciences Économiques et Gestion.")
-choice = input("Type The number of your Bac : ")
-
-if choice == "1" :
- print ("Now Add your notes")
- Math = float(input("Math :").replace(",","-"))
- philo = float(input("Philosophie :").replace(",","-"))
- pc = float(input("Physique :").replace(",","-"))
- svt = float(input("science de la vie et de la terre :").replace(",","-"))
- anglais = float(input("Anglais :").replace(",","-"))
- regional = float(input("entrez vote note du regional :").replace(",","-"))
- controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",","-"))
- controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",","-"))
- m = Math * 7
- pc = pc * 7
- s = svt * 5
- a = anglais * 2
- ph = philo * 2
- total = m + pc + s + a + ph
- national = total / 23 
- cont = controle1 + controle2
- contcontinue = cont / 2
- regcont = regional + contcontinue 
- divregcont = regcont / 2
- moyennegeneral = national + divregcont
- lanotetotale = moyennegeneral / 2
- if lanotetotale >= 10:
-  print("Passed",round(lanotetotale ,2))
- elif lanotetotale < 10 and lanotetotale > 7 :
-  print("Retake",round(lanotetotale ,2))
- else:
-  print("Failed",round(lanotetotale ,2))
-
-  ## bac science svt
-
-elif choice == "2":
+def bac_science_pc():
+    print("Now Add your notes")
+    Math = float(input("Math : ").replace(",","-"))
+    philo = float(input("Philosophie : ").replace(",","-"))
+    pc = float(input("Physique :").replace(",","-"))
+    svt = float(input("science de la vie et de la terre :").replace(",","-"))
+    anglais = float(input("Anglais :").replace(",","-"))
+    regional = float(input("entrez vote note du regional :").replace(",","-"))
+    controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",","-"))
+    controle2 = float(input("entrez votre note du controle 2eme semestre :").replace(",","-"))
+    m = Math * 7
+    pc = pc * 7
+    s = svt * 5
+    a = anglais * 2
+    ph = philo * 2
+    total = m + pc + s + a + ph
+    national = total / 23 
+    cont = controle1 + controle2
+    contcontinue = cont / 2
+    regcont = regional + contcontinue 
+    divregcont = regcont / 2
+    moyennegeneral = national + divregcont
+    lanotetotale = moyennegeneral / 2
+    if lanotetotale >= 10:
+     print("Passed",round(lanotetotale ,2))
+    elif lanotetotale < 10 and lanotetotale > 7 :
+     print("Retake",round(lanotetotale ,2))
+    else:
+     print("Failed",round(lanotetotale ,2))
+def bac_science_svt():
     print("Now Add your notes")
     Math = float(input("Math :").replace(",", "."))
     philo = float(input("Philosophie :").replace(",", "."))
@@ -71,8 +56,7 @@ elif choice == "2":
         print("Retake", round(lanotetotale, 2))
     else:
         print("Failed", round(lanotetotale, 2))
-##Bac Science Math (A)
-elif choice == "3":
+def bac_science_math_A():
     print("Now Add your notes")
     Math = float(input("Math :").replace(",", "."))
     philo = float(input("Philosophie :").replace(",", "."))
@@ -81,7 +65,6 @@ elif choice == "3":
     anglais = float(input("Anglais :").replace(",", "."))
     regional = float(input("entrez votre note du regional :").replace(",", "."))
     controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
-
     m = Math * 9
     ph = philo * 3
     phy = pc * 7
@@ -93,16 +76,13 @@ elif choice == "3":
     regcontdiv = regcont / 2
     notesbac = notesavg + regcontdiv 
     notesbacdiv = notesbac / 2
-    
-
     if notesbacdiv >= 10:
         print("Passed", round(notesbacdiv, 2))
     elif notesbacdiv < 10 and notesbacdiv > 7:
         print("Retake", round(notesbacdiv, 2))
     else:
         print("Failed", round(notesbacdiv, 2))
-##Bac science(B)
-elif choice == "4":
+def bac_science_math_B():
     print("Now Add your notes")
     Math = float(input("Math :").replace(",", "."))
     philo = float(input("Philosophie :").replace(",", "."))
@@ -111,29 +91,24 @@ elif choice == "4":
     anglais = float(input("Anglais :").replace(",", "."))
     regional = float(input("entrez votre note du regional :").replace(",", "."))
     controle1 = float(input("entrez votre note du controle 1er semestre :").replace(",", "."))
-
     m = Math * 9
     pc = physique * 7
     s = svt * 3
     a = anglais * 3
     ph = philo * 3
-    
     totalnotes = m + pc + s + a + ph
     totalnotesdiv = totalnotes / 25
     regcont = regional + controle1
     regcontdiv = regcont / 2
     moyennegeneral = totalnotesdiv + regcontdiv
     lanotetotale = moyennegeneral / 2
-    
     if lanotetotale >= 10:
         print("Passed", round(lanotetotale, 2))
     elif lanotetotale < 10 and lanotetotale > 7:
         print("Retake", round(lanotetotale, 2))
     else:
         print("Failed", round(lanotetotale, 2))
-
-## Bac Lettres 
-elif choice == "5":
+def bac_lettre():
     print("Now Add your notes")
     arabe = float(input("Langue Arabe :").replace(",", "."))
     philo = float(input("Philosophie :").replace(",", "."))
@@ -157,8 +132,7 @@ elif choice == "5":
         print("Retake", round(avgnotes, 2))
     else:
         print("Failed", round(avgnotes, 2))
-## Bac Sciences Économiques et Gestion
-elif choice == "6":
+def bac_science_economiques_gestion():
     print("Now Add your notes")
     eco = float(input("Économie Générale & Statistiques :").replace(",", "."))
     compta = float(input("Comptabilité & Mathématiques Financières :").replace(",", "."))
@@ -187,6 +161,33 @@ elif choice == "6":
         print("Retake", round(notesbac1, 2))
     else:
         print("Failed", round(notesbac1, 2))
-
+import sys
+print("Created By Mr-Ulyess ::")
+print()
+print("Select your Choice :")
+print()
+print("1-Bac Science Pc.")
+print("2-Bac Science Svt.")
+print("3-Bac Science Math (A).")
+print("4-Bac Science Math (B).")
+print("5-Bac Lettres.")
+print("6-Bac Sciences Économiques et Gestion.")
+print("0-Exit")
+choice = input("Type The number of your Bac : ")
+if choice == "0" :
+    print("Good Bye?...")
+    sys.exit(0)
+if choice == "1" :
+    bac_science_pc()
+elif choice == "2":
+    bac_science_svt()
+elif choice == "3":
+    bac_science_math_A()
+elif choice == "4":
+    bac_science_math_B()   
+elif choice == "5":
+    bac_lettre()
+elif choice == "6":
+    bac_science_economiques_gestion()
 else:
     print("invalid choice")
